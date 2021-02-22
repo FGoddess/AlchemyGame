@@ -6,6 +6,12 @@ public class CraftSlot : MonoBehaviour, IDropHandler
     [SerializeField] private bool _isSlotBusy = false;
     [SerializeField] private Element _element;
 
+    public bool IsSlotBusy
+    {
+        get { return _isSlotBusy; }
+        set { _isSlotBusy = value; }
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null && !_isSlotBusy)
@@ -14,12 +20,7 @@ public class CraftSlot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             _isSlotBusy = true;
             _element = eventData.pointerDrag.GetComponent<Element>();
-            _element._isInCraftSlot = true;
+            _element.IsInCraftSlot = true;
         }
-    }
-
-    public void SetBool()
-    {
-        _isSlotBusy = false;
     }
 }
