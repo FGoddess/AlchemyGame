@@ -6,10 +6,13 @@ using UnityEngine.EventSystems;
 public class Element : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler, IPointerDownHandler
 {
     [SerializeField] private RectTransform _rectTransform;
+    [SerializeField] private Transform _newParent;
     [SerializeField] private Transform _defaultParent;
 
     [SerializeField] private Canvas _canvas;
     [SerializeField] private CanvasGroup _canvasGroup;
+
+    [SerializeField] public bool _isInCraftSlot = false;
 
     void Start()
     {
@@ -19,8 +22,13 @@ public class Element : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragH
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if(_isInCraftSlot)
+        {
+            _isInCraftSlot = false;
+            GetComponentInParent<CraftSlot>().SetBool();
+        }
         _canvasGroup.blocksRaycasts = false;
-        transform.SetParent(_defaultParent);
+        transform.SetParent(_newParent);
         SetAnchorToMiddleCenter();
     }
 
@@ -40,10 +48,15 @@ public class Element : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragH
     public void OnEndDrag(PointerEventData eventData)
     {
         _canvasGroup.blocksRaycasts = true;
+
+        if(!_isInCraftSlot)
+        {
+            transform.SetParent(_defaultParent);
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("On Pointer Down");
+        //Debug.Log("On Pointer Down");
     }
 }

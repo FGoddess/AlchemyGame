@@ -1,27 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class CraftSlot : MonoBehaviour, IDropHandler
 {
+    [SerializeField] private bool _isSlotBusy = false;
+    [SerializeField] private Element _element;
+
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Dropped");
-        if (eventData.pointerDrag != null)
+        if (eventData.pointerDrag != null && !_isSlotBusy)
         {
             eventData.pointerDrag.transform.SetParent(this.transform);
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+            _isSlotBusy = true;
+            _element = eventData.pointerDrag.GetComponent<Element>();
+            _element._isInCraftSlot = true;
         }
     }
 
-    void Start()
+    public void SetBool()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        _isSlotBusy = false;
     }
 }
