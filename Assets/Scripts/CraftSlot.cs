@@ -6,6 +6,9 @@ public class CraftSlot : MonoBehaviour, IDropHandler
     [SerializeField] private bool _isSlotBusy = false;
     [SerializeField] private Element _element;
 
+    public delegate void OnElementDrop();
+    public static event OnElementDrop OnElementDropped;
+
     public bool IsSlotBusy
     {
         get { return _isSlotBusy; }
@@ -21,6 +24,7 @@ public class CraftSlot : MonoBehaviour, IDropHandler
             _isSlotBusy = true;
             _element = eventData.pointerDrag.GetComponent<Element>();
             _element.IsInCraftSlot = true;
+            OnElementDropped?.Invoke();
         }
     }
 }
