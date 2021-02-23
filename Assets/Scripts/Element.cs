@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
+
 
 public class Element : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
@@ -9,8 +11,11 @@ public class Element : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragH
     [SerializeField] private Transform _newParent;
     [SerializeField] private Transform _defaultParent;
 
-    [SerializeField] private Canvas _canvas;
+    [SerializeField] private string _name;
+
     [SerializeField] private CanvasGroup _canvasGroup;
+
+    public bool CanvasGroupBlocksRaycasts { get { return _canvasGroup.blocksRaycasts; } set { _canvasGroup.blocksRaycasts = value; } }
 
     [SerializeField] private bool _isInCraftSlot = false;
 
@@ -19,12 +24,16 @@ public class Element : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragH
         get { return _isInCraftSlot; }
         set { _isInCraftSlot = value; }
     }
+    public string Name
+    {
+        get { return _name; }
+        set { _name = value; }
+    }
 
     private void Awake()
     {
         _newParent = GameObject.Find("CraftSlots").GetComponent<Transform>();
         _defaultParent = GameObject.Find("Content").GetComponent<Transform>();
-        _canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
     }
 
     void Start()

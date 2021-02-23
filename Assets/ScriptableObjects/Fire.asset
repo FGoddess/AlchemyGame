@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   elementName: Fire
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: d267f7ca8b13bf1448688dc5b65e02dc, type: 3}

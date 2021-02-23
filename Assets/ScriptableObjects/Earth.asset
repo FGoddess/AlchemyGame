@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Earth
   m_EditorClassIdentifier: 
   elementName: Earth
-  image: {fileID: 21300000, guid: 1e2df57769697374094957df509899c3, type: 3}
+  image: {fileID: 21300000, guid: 6117b8032dbc2724f94d6addf16becf2, type: 3}

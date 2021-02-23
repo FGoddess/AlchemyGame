@@ -4,7 +4,9 @@ using UnityEngine.EventSystems;
 public class CraftSlot : MonoBehaviour, IDropHandler
 {
     [SerializeField] private bool _isSlotBusy = false;
-    [SerializeField] private Element _element;
+    [SerializeField] private Element _currentElement;
+
+    public Element CurrentElement { get { return _currentElement; } }
 
     public delegate void OnElementDrop();
     public static event OnElementDrop OnElementDropped;
@@ -22,8 +24,8 @@ public class CraftSlot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.transform.SetParent(this.transform);
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             _isSlotBusy = true;
-            _element = eventData.pointerDrag.GetComponent<Element>();
-            _element.IsInCraftSlot = true;
+            _currentElement = eventData.pointerDrag.GetComponent<Element>();
+            _currentElement.IsInCraftSlot = true;
             OnElementDropped?.Invoke();
         }
     }

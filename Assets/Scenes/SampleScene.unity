@@ -244,6 +244,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Element (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7923786341158191971, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
+        type: 3}
+      propertyPath: m_text
+      value: Earth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24, type: 3}
 --- !u!1001 &217365753
@@ -369,6 +374,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Element (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7923786341158191971, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
+        type: 3}
+      propertyPath: m_text
+      value: Water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24, type: 3}
 --- !u!1001 &263568644
@@ -378,12 +388,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 346184267}
     m_Modifications:
-    - target: {fileID: 4435000667003359232, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8e457d31bfc9d65468cb23e45f7159d7,
-        type: 3}
     - target: {fileID: 4435000667003359234, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
         type: 3}
       propertyPath: m_Pivot.x
@@ -493,6 +497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Element
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923786341158191971, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
+        type: 3}
+      propertyPath: m_text
+      value: Air
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24, type: 3}
@@ -801,10 +810,10 @@ RectTransform:
   m_Father: {fileID: 640061845}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7331245, y: 0.6821106}
-  m_AnchorMax: {x: 0.9362501, y: 0.79033184}
-  m_AnchoredPosition: {x: -2.0528564, y: -0.11642456}
-  m_SizeDelta: {x: -0.25216675, y: 2.2177734}
+  m_AnchorMin: {x: 0.67312413, y: 0.6821106}
+  m_AnchorMax: {x: 0.9362501, y: 0.82440454}
+  m_AnchoredPosition: {x: -0.32400513, y: -0.3999939}
+  m_SizeDelta: {x: 0.64863586, y: 1.3318329}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &717143156
 MonoBehaviour:
@@ -859,6 +868,7 @@ MonoBehaviour:
   _secondCraftSlot: {fileID: 1137101228}
   _elementPrefab: {fileID: 916889553}
   _elem: {fileID: 11400000, guid: 5a053b41a7f61ca42a44913d8611bb3d, type: 2}
+  _elemList: []
 --- !u!1 &916889553 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4435000667003359237, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
@@ -993,10 +1003,10 @@ RectTransform:
   m_Father: {fileID: 640061845}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.40125003, y: 0.6821106}
-  m_AnchorMax: {x: 0.6012499, y: 0.79033184}
-  m_AnchoredPosition: {x: -0.85321045, y: 0.38354492}
-  m_SizeDelta: {x: 3.0894775, y: 3.2177734}
+  m_AnchorMin: {x: 0.37125003, y: 0.6821106}
+  m_AnchorMax: {x: 0.6312501, y: 0.82440454}
+  m_AnchoredPosition: {x: 0, y: -1.0859985}
+  m_SizeDelta: {x: 4.2437744, y: 2.6332245}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1137101226
 MonoBehaviour:
@@ -1284,6 +1294,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Element (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7923786341158191971, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
+        type: 3}
+      propertyPath: m_text
+      value: Fire
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24, type: 3}
 --- !u!1 &1672979582
@@ -1320,9 +1335,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.06875002, y: 0.6821106}
-  m_AnchorMax: {x: 0.26625, y: 0.79033184}
-  m_AnchoredPosition: {x: -1.0198975, y: -0.31976318}
-  m_SizeDelta: {x: 4.8196106, y: 2.6245117}
+  m_AnchorMax: {x: 0.33125, y: 0.82440454}
+  m_AnchoredPosition: {x: -2.5, y: -1.2000122}
+  m_SizeDelta: {x: 1.8926239, y: 0.8611603}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1672979584
 MonoBehaviour:
@@ -1530,7 +1545,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
