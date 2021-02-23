@@ -12,14 +12,20 @@ public class OutputSlot : MonoBehaviour
 
     [SerializeField] private List<ElementScriptableObj> _elemList;
 
-
+    private void Awake()
+    {
+        foreach (var el in _elemList)
+        {
+            el.IsCreated = false;
+        }
+    }
     public void GenerateNewElement()
     {
         if (_firstCraftSlot.IsSlotBusy && _secondCraftSlot.IsSlotBusy)
         {
             foreach (var el in _elemList)
             {
-                if ((el.FirstElemForCraft.ElementName == _firstCraftSlot.CurrentElement.Name && el.SecondElemForCraft.ElementName == _secondCraftSlot.CurrentElement.Name) || (el.FirstElemForCraft.ElementName == _secondCraftSlot.CurrentElement.Name && el.SecondElemForCraft.ElementName == _firstCraftSlot.CurrentElement.Name))
+                if ((el.FirstElemForCraft.ElementName == _firstCraftSlot.CurrentElement.Name && el.SecondElemForCraft.ElementName == _secondCraftSlot.CurrentElement.Name) || (el.FirstElemForCraft.ElementName == _secondCraftSlot.CurrentElement.Name && el.SecondElemForCraft.ElementName == _firstCraftSlot.CurrentElement.Name) && !el.IsCreated)
                 {
                     InstantiateNewElement(el);
                 }
@@ -36,6 +42,7 @@ public class OutputSlot : MonoBehaviour
         tempEl.Name = el.ElementName;
         tempEl.CanvasGroupBlocksRaycasts = true;
         newobj.GetComponentInChildren<TextMeshProUGUI>().text = tempEl.Name;
+        el.IsCreated = true;
     }
 
     private void OnEnable()

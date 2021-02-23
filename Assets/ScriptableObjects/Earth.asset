@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1c612f1ddfbb4498d2c6b73e5f4a4f, type: 3}
   m_Name: Earth
   m_EditorClassIdentifier: 
-  elementName: Earth
-  image: {fileID: 21300000, guid: 6117b8032dbc2724f94d6addf16becf2, type: 3}
+  _elementName: Earth
+  _sprite: {fileID: 21300000, guid: 6117b8032dbc2724f94d6addf16becf2, type: 3}
+  _firstElemForCraft: {fileID: 11400000}
+  _secondElemForCraft: {fileID: 11400000}

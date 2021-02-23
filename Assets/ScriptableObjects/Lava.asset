@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1c612f1ddfbb4498d2c6b73e5f4a4f, type: 3}
   m_Name: Lava
   m_EditorClassIdentifier: 
-  _elementName: 
-  _sprite: {fileID: 0}
-  _firstElemForCraft: {fileID: 0}
-  _secondElemForCraft: {fileID: 0}
+  _elementName: Lava
+  _sprite: {fileID: 21300000, guid: 24d2be349f40b6f47bc5b9968cd988ed, type: 3}
+  _firstElemForCraft: {fileID: 11400000, guid: 079659dc44cb42d4a990ec819c598165, type: 2}
+  _secondElemForCraft: {fileID: 11400000, guid: 7a2d5c104e69b83409effc24354099dd,
+    type: 2}

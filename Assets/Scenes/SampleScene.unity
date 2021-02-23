@@ -244,6 +244,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Element (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4435000667003359246, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
+        type: 3}
+      propertyPath: _name
+      value: Earth
+      objectReference: {fileID: 0}
     - target: {fileID: 7923786341158191971, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
         type: 3}
       propertyPath: m_text
@@ -374,6 +379,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Element (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4435000667003359246, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
+        type: 3}
+      propertyPath: _name
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7923786341158191971, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
         type: 3}
       propertyPath: m_text
@@ -388,6 +398,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 346184267}
     m_Modifications:
+    - target: {fileID: 4435000667003359232, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e457d31bfc9d65468cb23e45f7159d7,
+        type: 3}
     - target: {fileID: 4435000667003359234, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
         type: 3}
       propertyPath: m_Pivot.x
@@ -497,6 +513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Element
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435000667003359246, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
+        type: 3}
+      propertyPath: _name
+      value: Air
       objectReference: {fileID: 0}
     - target: {fileID: 7923786341158191971, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
         type: 3}
@@ -704,7 +725,7 @@ RectTransform:
   - {fileID: 1137101225}
   - {fileID: 717143155}
   m_Father: {fileID: 1962349903}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -867,8 +888,15 @@ MonoBehaviour:
   _firstCraftSlot: {fileID: 1672979586}
   _secondCraftSlot: {fileID: 1137101228}
   _elementPrefab: {fileID: 916889553}
-  _elem: {fileID: 11400000, guid: 5a053b41a7f61ca42a44913d8611bb3d, type: 2}
-  _elemList: []
+  _elemList:
+  - {fileID: 11400000, guid: 3e5582d424376054d998f2405bf0dc95, type: 2}
+  - {fileID: 11400000, guid: a0d77069a3e99f5419f9363600ec3ffa, type: 2}
+  - {fileID: 11400000, guid: 079659dc44cb42d4a990ec819c598165, type: 2}
+  - {fileID: 11400000, guid: d1d5d2138630fb249a71a6e338fb19bc, type: 2}
+  - {fileID: 11400000, guid: 7a2d5c104e69b83409effc24354099dd, type: 2}
+  - {fileID: 11400000, guid: b9f0599e67d21c94c81d93c862860397, type: 2}
+  - {fileID: 11400000, guid: 015bcb7d8129d004baa0a8e8087640aa, type: 2}
+  - {fileID: 11400000, guid: 5a053b41a7f61ca42a44913d8611bb3d, type: 2}
 --- !u!1 &916889553 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4435000667003359237, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
@@ -1058,7 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isSlotBusy: 0
-  _element: {fileID: 0}
+  _currentElement: {fileID: 0}
 --- !u!1 &1274978624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1119,7 @@ RectTransform:
   m_Children:
   - {fileID: 1055710121}
   m_Father: {fileID: 1962349903}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.5435722}
@@ -1294,6 +1322,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Element (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4435000667003359246, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
+        type: 3}
+      propertyPath: _name
+      value: Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 7923786341158191971, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
         type: 3}
       propertyPath: m_text
@@ -1389,7 +1422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isSlotBusy: 0
-  _element: {fileID: 0}
+  _currentElement: {fileID: 0}
 --- !u!224 &1709377971 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4435000667003359234, guid: ccf0bc7dce0e42e4aa33fb96b8b09a24,
@@ -1561,8 +1594,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1817628377}
-  - {fileID: 640061845}
   - {fileID: 1274978625}
+  - {fileID: 640061845}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

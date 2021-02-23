@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1c612f1ddfbb4498d2c6b73e5f4a4f, type: 3}
   m_Name: Steam
   m_EditorClassIdentifier: 
-  elementName: Steam
-  image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _elementName: Steam
+  _sprite: {fileID: 21300000, guid: 8f4773ea02fd7014db4293b7a2fbf96c, type: 3}
+  _firstElemForCraft: {fileID: 11400000, guid: 5a053b41a7f61ca42a44913d8611bb3d, type: 2}
+  _secondElemForCraft: {fileID: 11400000, guid: 7a2d5c104e69b83409effc24354099dd,
+    type: 2}

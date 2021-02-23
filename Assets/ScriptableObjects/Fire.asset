@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1c612f1ddfbb4498d2c6b73e5f4a4f, type: 3}
   m_Name: Fire
   m_EditorClassIdentifier: 
-  elementName: Fire
-  image: {fileID: 21300000, guid: d267f7ca8b13bf1448688dc5b65e02dc, type: 3}
+  _elementName: Fire
+  _sprite: {fileID: 21300000, guid: d267f7ca8b13bf1448688dc5b65e02dc, type: 3}
+  _firstElemForCraft: {fileID: 11400000}
+  _secondElemForCraft: {fileID: 11400000}
